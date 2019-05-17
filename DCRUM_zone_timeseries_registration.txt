@@ -1,0 +1,147 @@
+Use the Dynatrace API put /timeseries/{timeseriesIdentifier} to register these metrics.
+e.g. put /timeseries/custom:DCRUMTotalBytes
+
+custom:DCRUMTotalBytes
+{
+  "displayName": "Total bytes (B)",
+  "unit": "Byte",
+  "dimensions": [
+    "Software_Service",
+    "Zone"
+  ],
+  "types": [
+    "DCRUM"
+  ]
+}
+
+custom:DCRUMClientBandwidthUsage
+{
+  "displayName": "Client bandwidth usage (bps)",
+  "unit": "BitPerSecond",
+  "dimensions": [
+    "Software_Service",
+    "Zone"
+  ],
+  "types": [
+    "DCRUM"
+  ]
+}
+
+custom:DCRUMServerBandwidthUsage
+{
+  "displayName": "Server bandwidth usage (bps)",
+  "unit": "BitPerSecond",
+  "dimensions": [
+    "Software_Service",
+    "Zone"
+  ],
+  "types": [
+    "DCRUM"
+  ]
+}
+
+custom:DCRUMTotalBandwidthUsage
+{
+  "displayName": "Total bandwidth usage (bps)",
+  "unit": "BitPerSecond",
+  "dimensions": [
+    "Software_Service",
+    "Zone"
+  ],
+  "types": [
+    "DCRUM"
+  ]
+}
+
+custom:DCRUMNetworkPerf
+{
+  "displayName": "Network performance (%)",
+  "unit": "Percent",
+  "dimensions": [
+    "Software_Service",
+    "Zone"
+  ],
+  "types": [
+    "DCRUM"
+  ]
+}
+
+custom:DCRUMEndtoEndRTT
+{
+  "displayName": "End-to-end RTT (ms)",
+  "unit": "MilliSecond",
+  "dimensions": [
+    "Software_Service",
+    "Zone"
+  ],
+  "types": [
+    "DCRUM"
+  ]
+}
+
+custom:DCRUMTwoWayLossRate
+{
+  "displayName": "Two-way loss rate (%)",
+  "unit": "Percent",
+  "dimensions": [
+    "Software_Service",
+    "Zone"
+  ],
+  "types": [
+    "DCRUM"
+  ]
+}
+
+delete - custom:DCRUMUniqueClientIPAddress
+
+custom:DCRUMUniqueUsers
+{
+  "displayName": "Unique users",
+  "unit": "Count",
+  "dimensions": [
+    "Software_Service",
+    "Zone"
+  ],
+  "types": [
+    "DCRUM"
+  ]
+}
+
+custom:DCRUMApplicationPerformance
+{
+  "displayName": "Application performance (%)",
+  "unit": "Percent",
+  "dimensions": [
+    "Software_Service",
+    "Zone"
+  ],
+  "types": [
+    "DCRUM"
+  ]
+}
+
+custom:DCRUMOperationTime
+{
+  "displayName": "Operation time (ms)",
+  "unit": "MilliSecond",
+  "dimensions": [
+    "Software_Service",
+    "Zone"
+  ],
+  "types": [
+    "DCRUM"
+  ]
+}
+
+custom:DCRUMAvailabilityTotal
+{
+  "displayName": "Availability (total) (%)",
+  "unit": "Percent",
+  "dimensions": [
+    "Software_Service",
+    "Zone"
+  ],
+  "types": [
+    "DCRUM"
+  ]
+}
