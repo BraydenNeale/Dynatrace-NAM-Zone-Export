@@ -32,12 +32,10 @@ $PROD_DTM_SERVER = "https://dynatrace/e/<ENV_ID>/api/v1/entity/infrastructure/cu
 $PROD_API_TOKEN = "PROD_TOKEN"
 #$DEV_DTM_SERVER = "https://dynatrace-dev/e/<ENV_ID>/api/v1/entity/infrastructure/custom"
 #$DEV_API_TOKEN = "DEV_TOKEN>"
-$SAAS_DTM_SERVER = "https://rmj26650.live.dynatrace.com/api/v1/entity/infrastructure/custom/"
-$SAAS_API_TOKEN = "KiQaKtLHRX67g_GZeK-qu"
+$SAAS_DTM_SERVER = "https://<DYNATRACE_URL>/api/v1/entity/infrastructure/custom/"
+$SAAS_API_TOKEN = "<TOKEN>"
 $CustomEntityName = "<ENTITY NAME>"
 
-# https://<DTM_SERVER>/api/v1/entity/infrastructure/custom/<ENTITY_NAME>?Api-Token=<API_TOKEN>
-#$DTM_ENDPOINT = "$($PROD_DTM_SERVER)/$($CustomEntityName)?Api-Token=$PROD_API_TOKEN"
 $DTM_ENDPOINT = "$($SAAS_DTM_SERVER)/$($CustomEntityName)?Api-Token=$SAAS_API_TOKEN"
 
 ### CSV FORMATTING ###
