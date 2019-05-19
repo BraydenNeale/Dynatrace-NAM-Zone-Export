@@ -48,7 +48,6 @@ $csv = $raw | Where { $_ -notmatch "^#" } | ConvertFROM-Csv
 ### CREATE AND SEND PAYLOAD ###
 # Make sure you have first 'Put' the custom metrics into timeseries API
 # https://www.dynatrace.com/support/help/dynatrace-api/environment/timeseries-api/manage-custom-metrics-via-api/#anchor_put_metric
-$jsdate = $Timestamp
 foreach ($row in $csv)
 {
     $payload = @{
@@ -62,7 +61,7 @@ foreach ($row in $csv)
               "Zone" = "$($row.'Zone')"
             };
             "dataPoints" = @( 
-                ,@($jsdate, [float]$row.'Total bytes (B)')
+                ,@($Timestamp, [float]$row.'Total bytes (B)')
             ) 
           },
           @{
@@ -72,7 +71,7 @@ foreach ($row in $csv)
               "Zone"= "$($row.'Zone')"
             };
             "dataPoints" = @(
-                ,@($jsdate, [float]$row.'Client bandwidth usage (bps)')
+                ,@($Timestamp, [float]$row.'Client bandwidth usage (bps)')
             )
           },
           @{
@@ -82,7 +81,7 @@ foreach ($row in $csv)
               "Zone"= "$($row.'Zone')"
             };
             "dataPoints" = @(
-                ,@($jsdate, [float]$row.'Server bandwidth usage (bps)')
+                ,@($Timestamp, [float]$row.'Server bandwidth usage (bps)')
             )
           },
           @{
@@ -92,7 +91,7 @@ foreach ($row in $csv)
               "Zone"= "$($row.'Zone')"
             };
             "dataPoints" = @(
-                ,@($jsdate, [float]$row.'Total bandwidth usage (bps)')
+                ,@($Timestamp, [float]$row.'Total bandwidth usage (bps)')
             )
           },
           @{
@@ -102,7 +101,7 @@ foreach ($row in $csv)
               "Zone" = "$($row.'Zone')"
             };
             "dataPoints" = @(
-                ,@($jsdate, [float]$row.'Network performance (%)')
+                ,@($Timestamp, [float]$row.'Network performance (%)')
             )
           },      
           @{
@@ -112,7 +111,7 @@ foreach ($row in $csv)
               "Zone" = "$($row.'Zone')"
             };
             "dataPoints" = @(
-                ,@($jsdate, [float]$row.'End-to-end RTT (ms)')
+                ,@($Timestamp, [float]$row.'End-to-end RTT (ms)')
             )
           },
           @{
@@ -122,7 +121,7 @@ foreach ($row in $csv)
               "Zone" = "$($row.'Zone')"
             };
             "dataPoints" = @(
-                ,@($jsdate, [float]$row.'Two-way loss rate(%)')
+                ,@($Timestamp, [float]$row.'Two-way loss rate(%)')
             )
           },
           @{
@@ -133,7 +132,7 @@ foreach ($row in $csv)
             
             };
             "dataPoints" = @(
-                ,@($jsdate, [float]$row.'Unique users')
+                ,@($Timestamp, [float]$row.'Unique users')
             )
           },
           @{
@@ -143,7 +142,7 @@ foreach ($row in $csv)
               "Zone"= "$($row.'Zone')"
             };
             "dataPoints" = @(
-                ,@($jsdate, [float]$row.'Application performance (%)')
+                ,@($Timestamp, [float]$row.'Application performance (%)')
             )
           },
           @{
@@ -153,7 +152,7 @@ foreach ($row in $csv)
               "Zone"= "$($row.'Zone')"
             };
             "dataPoints" = @(
-                ,@($jsdate, [float]$row.'Operation time (ms)')
+                ,@($Timestamp, [float]$row.'Operation time (ms)')
             )
           },
           @{
@@ -163,7 +162,7 @@ foreach ($row in $csv)
               "Zone"= "$($row.'Zone')"
             };
             "dataPoints" = @(
-                ,@($jsdate, [float]$row.'Availability (total) (%)')
+                ,@($Timestamp, [float]$row.'Availability (total) (%)')
             )
           }
         )
